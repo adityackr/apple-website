@@ -101,7 +101,7 @@ const Model = () => {
 					<div className="mx-auto w-full">
 						<p className="text-sm font-light text-center mb-5">{model.title}</p>
 
-						<div className="flex-center">
+						<div className="flex-center flex-col sm:flex-row space-y-4 sm:space-y-0">
 							<ul className="color-container">
 								{models.map((item, i) => (
 									<li
