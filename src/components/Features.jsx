@@ -37,7 +37,7 @@ const Features = () => {
 			ease: 'power1.inOut',
 			duration: 1,
 		});
-	});
+	}, []);
 
 	return (
 		<section className="h-full common-padding bg-zinc relative overflow-hidden ">
