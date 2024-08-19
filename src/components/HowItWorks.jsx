@@ -24,6 +24,16 @@ const HowItWorks = () => {
 			duration: 1,
 			ease: 'power2.inOut',
 		});
+		gsap.to('#frameVideo', {
+			scrollTrigger: {
+				trigger: '#frameVideo',
+				toggleActions: 'play pause reverse restart',
+				start: '-10% bottom',
+			},
+			onComplete: () => {
+				videoRef.current.play();
+			},
+		});
 	}, []);
 
 	return (
@@ -55,6 +65,7 @@ const HowItWorks = () => {
 						</div>
 						<div className="hiw-video">
 							<video
+								id="frameVideo"
 								className="pointer-events-none"
 								playsInline
 								preload="none"
